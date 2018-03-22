@@ -34,19 +34,19 @@ Se abre un editor para escribir la descripcion del `commit`
 ```
   git reset --soft HEAD~1
 ```
-##Remote
+## Remote
 Es un servidor remoto para conectar con el repositorio.
-##Push
+## Push
 >Proceso de subir archivo al repositorio.
 ```
   git push [remote] [rama] 
 ```
-##Pull (sincronizacion)
+## Pull (sincronizacion)
 >Actualizar los archivos locales con el repositorio online.
 ```
   git pull [remote] [rama]
 ```
-##Historial
+## Historial
 >Muestra el historial del repositorio
 ```
   git log
