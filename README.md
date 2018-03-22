@@ -53,7 +53,17 @@ Es un servidor remoto para conectar con el repositorio.
 ```
 ## Banch (ramas)
 >Agrega una rama en el repositorio.
+>Mostrar lista de ramas.
 ```
+  git branch
+```
+>Agrega una rama
+```
+  git branch [nombre-rama]
+```
+>Cambiar de rama
+```
+  git checkout [nombre-rama]
 ```
 
 #GitHub
