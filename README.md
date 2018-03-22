@@ -51,9 +51,22 @@ Es un servidor remoto para conectar con el repositorio.
 ```
   git log
 ```
+>Muestra el historial del repositorio con alguna info
+```
+  git log --decorate
+```
+>Muestra el historial del repositorio con grafico, con alguna info
+```
+  git log --graph --decorate
+```
+>Muestra el historial del repositorio con grafico, con info y en una linea
+```
+  git log --graph --decorate --oneline -all
+```
 ## Banch (ramas)
 >Agrega una rama en el repositorio.
 >Mostrar lista de ramas.
+<<<<<<< HEAD
 ```
   git branch
 ```
@@ -66,7 +79,30 @@ Es un servidor remoto para conectar con el repositorio.
   git checkout [nombre-rama]
 ```
 
+=======
+```
+  git branch
+```
+>Agrega una rama
+```
+  git branch [nombre-rama]
+```
+>Cambiar de rama
+```
+  git checkout [nombre-rama]
+```
+>Para crear y cambiar de rama
+```
+  git checkout -b [nombre-rama]
+```
+## Fusion de ramas
+Junta las ramas
+```
+   git merge [rama-destino]
+```
+Los rama donde se esta, se ve aplicada a la rama de desctino.
+>>>>>>> prueba-rama
 
-#GitHub
+# GitHub
 
 
