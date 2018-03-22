@@ -34,6 +34,11 @@ Se abre un editor para escribir la descripcion del `commit`
 ```
   git reset --soft HEAD~1
 ```
+>Para corregir el ultimo `commit`
+```
+  git commit --amend
+```
+Tener cuidado de hacer este `commit` puede generar conflicto con el repositorio que tiene otras personas.
 ## Remote
 Es un servidor remoto para conectar con el repositorio.
 ## Push
@@ -66,20 +71,6 @@ Es un servidor remoto para conectar con el repositorio.
 ## Banch (ramas)
 >Agrega una rama en el repositorio.
 >Mostrar lista de ramas.
-<<<<<<< HEAD
-```
-  git branch
-```
->Agrega una rama
-```
-  git branch [nombre-rama]
-```
->Cambiar de rama
-```
-  git checkout [nombre-rama]
-```
-
-=======
 ```
   git branch
 ```
@@ -95,14 +86,26 @@ Es un servidor remoto para conectar con el repositorio.
 ```
   git checkout -b [nombre-rama]
 ```
+>Eliminar rama que ha sido mezclada
+```
+  git branch -d [nombre-rama]
+```
+>Eliminar rama si importar que la rama no este merge con la rama actual
+```
+  git branch -D [nombre-rama]
+```
+Se pierde archivo o modificaciones de la rama a borrar.
 ## Fusion de ramas
 Junta las ramas
 ```
    git merge [rama-destino]
 ```
 Los rama donde se esta, se ve aplicada a la rama de desctino.
->>>>>>> prueba-rama
-
+---
+>Para limpiar los historiales basura del repositorio
+```
+  git gc
+```
 # GitHub
 
 
