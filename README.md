@@ -40,7 +40,11 @@ Se abre un editor para escribir la descripcion del `commit`
 ```
 Tener cuidado de hacer este `commit` puede generar conflicto con el repositorio que tiene otras personas.
 ## Remote
-Es un servidor remoto para conectar con el repositorio.
+>Es un servidor remoto para conectar con el repositorio.
+>Agrega un remoto asociado a una URL de github
+```
+  git remote add [nombre-remoto] [url-github]
+```
 ## Push
 >Proceso de subir archivo al repositorio.
 ```
