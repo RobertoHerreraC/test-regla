@@ -26,6 +26,10 @@ Se abre un editor para escribir la descripcion del `commit`
 ```
   git commit -m '[aqui va la descripcion]'
 ```
+>Para agregar todo los archivos al estado de preparacion y establecer un `commit` a la vez.
+```
+  git commit -am '[aqui va la descripcion]'
+```
 >Para deshacer el ultimo `commit`
 ```
   git reset --soft HEAD~1
