@@ -12,12 +12,24 @@
 ```
   rm [nombreArchivo]
 ```
->Para borrarlo del repositorio
+>Para borrarlo del repositorio. Es necesario en el caso se borre un archivo en la carpeta del proyecto.
 ```
   git rm [nombreArchivo] 
 ```
 ## Commit
->Especificar los guardados de los archivos en una lista de especificaciones.
+>Especificar los guardados de los archivos en los estados de preparacion del repositorio.
+```
+  git commit 
+```
+Se abre un editor para escribir la descripcion del `commit`
+>Para hacerlo de manera corrida.
+```
+  git commit -m '[aqui va la descripcion]'
+```
+>Para deshacer el ultimo `commit`
+```
+  git reset --soft HEAD~1
+```
 ## Banch
 >Agrega una rama en el proyecto.
 
