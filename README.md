@@ -51,9 +51,10 @@ Es un servidor remoto para conectar con el repositorio.
 ```
   git log
 ```
-## Banch
->Agrega una rama en el proyecto.
-
+## Banch (ramas)
+>Agrega una rama en el repositorio.
+```
+```
 
 #GitHub
 
