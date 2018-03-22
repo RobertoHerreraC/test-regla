@@ -45,6 +45,15 @@ Tener cuidado de hacer este `commit` puede generar conflicto con el repositorio 
 ```
   git remote add [nombre-remoto] [url-github]
 ```
+>Eliminar un remoto asociado a una URL de github
+```
+  git remote rm [nombre-remoto]
+```
+## Clonar
+Obtener un proyecto desde un repositorio remoto
+```
+  git clone [url-remoto]
+```
 ## Push
 >Proceso de subir archivo al repositorio.
 ```
