@@ -45,6 +45,14 @@ Tener cuidado de hacer este `commit` puede generar conflicto con el repositorio 
 ```
   git remote add [nombre-remoto] [url-github]
 ```
+>Ver los remotos
+```
+  git remote 
+```
+>Ver los remotos con las url
+```
+  git remote -v
+```
 >Eliminar un remoto asociado a una URL de github
 ```
   git remote rm [nombre-remoto]
