@@ -63,6 +63,10 @@ Obtener un proyecto desde un repositorio remoto
 ```
   git clone [url-remoto]
 ```
+Obtener un proyecto desde un repositorio remoto de una rama especifica
+```
+  git clone -b [nom_branch] [url-remoto]
+```
 ## Push
 >Proceso de subir archivo al repositorio.
 ```
@@ -121,6 +125,10 @@ Se pierde archivo o modificaciones de la rama a borrar.
 Junta las ramas
 ```
    git merge [rama-destino]
+```
+>Aborta la fusion en un estado de conflicto
+```
+  git merge --abort
 ```
 Los rama donde se esta, se ve aplicada a la rama de desctino.
 ---
