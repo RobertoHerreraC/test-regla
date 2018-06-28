@@ -27,6 +27,7 @@ Se abre un editor para escribir la descripcion del `commit`
   git commit -m '[aqui va la descripcion]'
 ```
 >Para agregar todo los archivos al estado de preparacion y establecer un `commit` a la vez.
+Se omite el `git add .`
 ```
   git commit -am '[aqui va la descripcion]'
 ```
