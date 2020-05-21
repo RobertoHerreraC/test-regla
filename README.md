@@ -1,14 +1,67 @@
 # Git
-## Agrega un archivo para un commit.
+
+## Flujo de Git
+- Archivos y carpetas
+- Stage o escenario
+- Commits
+
+## Comandos de configuarcion
+> Mostrar y setear el valor de la informacion del usuario
+```
+  git config --global user.name [usuario]
+  git config --global user.email [email]
+```
+> Crear alias para acortar de comandos
+```
+  git config --global alias.[nombrealias] "[comando expceto git]"
+```
+
+## Iniciar un repositorio local
+>Crear un repositorio
+```
+  git init
+```
+
+## Verificacion de los estados del flujo del Git
+Muestra el estado de los archivos
+```
+  git status
+```
+Variaciones:
+- Muestra los archivos sin ninguna recomendacion y de manera comprimida
+```
+  git status -s
+```
+- Muestra los archivos sin ninguna recomendacion, de manera comprimida y con la rama actual
+```
+  git status -s -b
+```
+
+## Agrega un archivo para un commit o Stage.
 >Agregar al limbo los archivos que van a recibir un `commit`
 ```
   git add [nombreArchivo] 
 ```
+Variaciones:
+- Agrega todos los archivos al Stage
+```
+  git add . 
+```
+
 >Para sacar el archivo en el estado de preparacion para un eventual `commit`
 ```
   git reset [nombreArchivo]
 ```
->Para borrar un archivo de **proyecto**. (Comando de bash)
+Variaciones:
+> Quita todos los archivos del estado de preparación
+```
+  git reset .
+```
+```
+  git reset HEAD .
+```
+-> HEAD es el punto donde se encuentra
+>Para borrar un archivo de **proyecto local**. (Comando de bash)
 ```
   rm [nombreArchivo]
 ```
@@ -24,22 +77,66 @@
 Se abre un editor para escribir la descripcion del `commit`
 >Para hacerlo de manera corrida.
 ```
-  git commit -m '[aqui va la descripcion]'
+  git commit -m "[aqui va la descripcion]"
 ```
 >Para agregar todo los archivos al estado de preparacion y establecer un `commit` a la vez.
 Se omite el `git add .`
 ```
-  git commit -am '[aqui va la descripcion]'
+  git commit -am "[aqui va la descripcion]"
 ```
->Para deshacer el ultimo `commit`
+>Para deshacer el ultimo `commit`, dejandolo en el estado stage y con los cambios guardados
 ```
   git reset --soft HEAD~1
 ```
+>Para deshacer el ultimo `commit`, dejandolo en el estado de directorio y con los cambios actuales no guardados.
+```
+  git reset HEAD^
+```
+
 >Para corregir el ultimo `commit`
 ```
-  git commit --amend
+  git commit --amend -m "[contenido arreglado]"
 ```
 Tener cuidado de hacer este `commit` puede generar conflicto con el repositorio que tiene otras personas.
+
+## Etiquetar Commit
+> Crear el tag en el proyecto, lo asigna al ultimo commit
+```
+  git tag [nombre_tag]
+```
+Variaciones:
+- Agregar una etiqueta con descripcion
+```
+  git tag -a [nombre_tag] -m "[descripcion]"
+```
+- Agregar una etiqueta a un commit especifico
+```
+  git tag -a [nombre_tag] [idHash] -m "[descripcion]"
+```
+> Eliminar el tag
+```
+  git tag -d [nombre_tag]
+```
+> Mostrar informacion del tag
+```
+  git show [nombre_tag]
+```
+## Diferencias
+Revisar diferencias entre versiones.
+
+Entre el actual y el commit del hash asignado
+```
+  git diff [hash]
+```
+Entre el estado actual de archivo o directorio(no en el estado Stage) y el ultimo commit
+```
+  git diff
+```
+Eliminar cambios en el estado de archivo (en el ultimo commit)
+```
+  git checkout -- [archivo.ext]
+```
+
 ## Remote
 >Es un servidor remoto para conectar con el repositorio.
 >Agrega un remoto asociado a una URL de github
@@ -94,6 +191,19 @@ Obtener un proyecto desde un repositorio remoto de una rama especifica
 ```
   git log --graph --decorate --oneline -all
 ```
+> Numero de linea que se editaron, cuales fueron los cambios a nivel de archivo
+```
+  git log --stat 
+```
+> Muestra los cambios y cuales fueron los cambios a nivel de código
+```
+  git log -p 
+```
+Agrupa los commits que ha realizado cada usuario
+```
+  git shortlog
+```
+
 ## Banch (ramas)
 >Agrega una rama en el repositorio.
 >Mostrar lista de ramas.
